@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
+const API_BASE_URL = 'https://app-vina.onrender.com';
 
 function HrmCbnvDonviList() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/oracle/hrm-cbnv-donvi')
+    fetch(`${API_BASE_URL}/api/oracle/hrm-cbnv-donvi`)
       .then(res => res.json())
       .then(data => {
         setData(data);

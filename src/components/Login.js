@@ -11,9 +11,9 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
-
+  const BACKEND_URL = 'https://app-vina.onrender.com';  
     try {
-      const res = await fetch('http://localhost:5000/api/hrm-login/login', {
+      const res = await fetch(`${BACKEND_URL}/api/hrm-login/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ma_nv: maNv, password }),
