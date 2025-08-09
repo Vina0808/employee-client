@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api/employees';
+const API_URL = 'https://app-vina.onrender.com/api/employees';
 
 // Các hàm cũ ...
 export const getEmployees = async () => {

@@ -14,7 +14,8 @@ function Login() {
     setError(''); // reset lỗi trước khi gửi
 
     try {
-      const response = await axios.post('http://localhost:5000/api/hrm-login/login', {
+      const API_BASE_URL = 'https://app-vina.onrender.com';  // Thay bằng URL backend của bạn
+      const response = await axios.post(`${API_BASE_URL}/api/hrm-login/login`, {
         username: maNV,   // gửi username là mã nhân viên
         password: password
       });
